@@ -36,7 +36,7 @@ app.use("/user/", userRoute);
 app.use("/purchase",purchaseRoute);
 
 
-app.listen(PORT, ()=>{
+app.get(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
     dbConnect();
 })

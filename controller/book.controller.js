@@ -16,14 +16,14 @@ export const getBook = async(req,res) => {
 
 export const allBook = async (req, res) => {
   try {
-    console.log("into get file dunction");
+    console.log("Into get file function");
     const data = await Book.find();
     return res.status(200).json({
       status: "ok",
       data: data,
     });
   } catch (error) {
-    return res.status(500).send({
+    return res.status(500).json({ 
       status: "error",
       message: error.message,
     });

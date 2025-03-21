@@ -16,7 +16,7 @@ export const getBook = async(req,res) => {
 
 export const allBook = async (req, res) => {
     try {
-        const data = await Book.find({}); 
+        const data = await Book.find(); 
         res.send({
         status: "ok",
         data: data,

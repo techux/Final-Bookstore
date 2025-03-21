@@ -8,7 +8,7 @@ import {allBook, addBook, deleteBook} from './controller/book.controller.js'
 import { createOrder } from './controller/order.controller.js';
 import upload from './middlewares/multer.middleware.js'
 import purchaseRoute from "./routes/purchase.route.js";
-import serverless from 'serverless-http';
+
 
 dotenv.config();
 
@@ -38,4 +38,3 @@ app.listen(PORT, ()=>{
     dbConnect();
 })
 
-export const handler = serverless(app);

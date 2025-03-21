@@ -15,19 +15,20 @@ export const getBook = async(req,res) => {
 
 
 export const allBook = async (req, res) => {
-    try {
-        const data = await Book.find(); 
-        res.send({
-        status: "ok",
-        data: data,
-        });
-    } catch (error) {
-        res.status(500).send({
-        status: "error",
-        message: error.message,
-        });
-    }
-}
+  try {
+    console.log("into get file dunction");
+    const data = await Book.find();
+    return res.status(200).send({
+      status: "ok",
+      data: data,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      status: "error",
+      message: error.message,
+    });
+  }
+};
 
 
 export const addBook = async (req, res) => {

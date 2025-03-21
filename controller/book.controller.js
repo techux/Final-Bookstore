@@ -18,7 +18,7 @@ export const allBook = async (req, res) => {
   try {
     console.log("into get file dunction");
     const data = await Book.find();
-    return res.status(200).send({
+    return res.status(200).json({
       status: "ok",
       data: data,
     });
